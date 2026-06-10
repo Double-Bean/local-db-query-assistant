@@ -1,0 +1,4 @@
+interface:
+  display_name: "本地数据库查询助手"
+  short_description: "安全配置、检查并查询本地数据库"
+  default_prompt: "Use $local-db-query-assistant to inspect a local database schema, run safe read-only SQL, and summarize the answer in Chinese."
