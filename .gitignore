@@ -1,0 +1,30 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+references/mysql_profiles.json
+
+# Local database files and exports
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.bak
+*.dump
+*.sql
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.zip
+
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
