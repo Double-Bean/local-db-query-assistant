@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1680" viewBox="0 0 1180 1680">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 15px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #64748b; }
+      .node { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 10; }
+      .phase { fill: #eef6ff; stroke: #93c5fd; stroke-width: 1.8; rx: 10; }
+      .decision { fill: #fff7ed; stroke: #fdba74; stroke-width: 1.8; }
+      .end { fill: #ecfdf5; stroke: #86efac; stroke-width: 1.8; rx: 10; }
+      .text { font: 16px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #1f2937; text-anchor: middle; dominant-baseline: middle; }
+      .small { font: 14px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #334155; text-anchor: middle; dominant-baseline: middle; }
+      .label { font: 13px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #64748b; text-anchor: middle; }
+      .line { stroke: #4b5563; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1180" height="1680"/>
+  <text class="title" x="590" y="56">数据库查询助手 Workflow</text>
+  <text class="subtitle" x="590" y="86" text-anchor="middle">理解需求 → 定位数据源 → 验证表字段 → 执行只读 SQL → 自验证 → 输出结果 → 沉淀口径</text>
+
+  <rect class="phase" x="440" y="120" width="300" height="58"/>
+  <text class="text" x="590" y="149">用户提出查数需求</text>
+
+  <rect class="phase" x="440" y="230" width="300" height="58"/>
+  <text class="text" x="590" y="259">理解业务问题</text>
+
+  <rect class="node" x="100" y="330" width="270" height="58"/>
+  <text class="small" x="235" y="359">确认项目 / 功能 / 页面</text>
+  <rect class="node" x="455" y="330" width="270" height="58"/>
+  <text class="small" x="590" y="359">确认指标 / 时间 / 粒度</text>
+  <rect class="node" x="810" y="330" width="270" height="58"/>
+  <text class="small" x="945" y="359">确认范围 / 是否明细</text>
+
+  <polygon class="decision" points="590,445 745,510 590,575 435,510"/>
+  <text class="text" x="590" y="510">信息是否足够？</text>
+
+  <rect class="node" x="90" y="480" width="280" height="60"/>
+  <text class="small" x="230" y="510">只追问业务侧能回答的问题</text>
+
+  <rect class="phase" x="440" y="640" width="300" height="58"/>
+  <text class="text" x="590" y="669">定位数据源</text>
+
+  <rect class="node" x="90" y="745" width="280" height="60"/>
+  <text class="small" x="230" y="775">搜索 learned route</text>
+  <rect class="node" x="450" y="745" width="280" height="60"/>
+  <text class="small" x="590" y="775">查看 Profile / hints</text>
+  <rect class="node" x="810" y="735" width="280" height="80"/>
+  <text class="small" x="950" y="763">按页面名 / 截图表头</text>
+  <text class="small" x="950" y="790">按钮名 / 关键词搜索</text>
+
+  <polygon class="decision" points="590,875 745,940 590,1005 435,940"/>
+  <text class="text" x="590" y="940">是否找到可信口径？</text>
+
+  <rect class="node" x="90" y="910" width="280" height="60"/>
+  <text class="small" x="230" y="940">继续探索候选表</text>
+
+  <rect class="node" x="90" y="1040" width="280" height="54"/>
+  <text class="small" x="230" y="1067">tables 查看表</text>
+  <rect class="node" x="90" y="1130" width="280" height="54"/>
+  <text class="small" x="230" y="1157">desc 查看字段结构</text>
+  <rect class="node" x="90" y="1220" width="280" height="60"/>
+  <text class="small" x="230" y="1250">小样本 SELECT 验证</text>
+
+  <rect class="phase" x="440" y="1060" width="300" height="58"/>
+  <text class="text" x="590" y="1089">确定查询口径</text>
+
+  <rect class="phase" x="440" y="1185" width="300" height="58"/>
+  <text class="text" x="590" y="1214">编写只读 SQL</text>
+
+  <rect class="node" x="810" y="1120" width="280" height="60"/>
+  <text class="small" x="950" y="1150">仅允许只读语句</text>
+  <rect class="node" x="810" y="1205" width="280" height="60"/>
+  <text class="small" x="950" y="1235">添加范围 / 条件 / LIMIT</text>
+  <rect class="node" x="810" y="1290" width="280" height="60"/>
+  <text class="small" x="950" y="1320">必要时 cross_query 跨库</text>
+
+  <rect class="phase" x="440" y="1325" width="300" height="58"/>
+  <text class="text" x="590" y="1354">执行查询</text>
+
+  <rect class="phase" x="440" y="1430" width="300" height="58"/>
+  <text class="text" x="590" y="1459">SQL 自验证</text>
+
+  <rect class="node" x="80" y="1390" width="260" height="44"/>
+  <text class="small" x="210" y="1412">表是否正确</text>
+  <rect class="node" x="80" y="1450" width="260" height="44"/>
+  <text class="small" x="210" y="1472">字段是否存在</text>
+  <rect class="node" x="80" y="1510" width="260" height="44"/>
+  <text class="small" x="210" y="1532">WHERE 是否合理</text>
+
+  <rect class="node" x="840" y="1390" width="260" height="44"/>
+  <text class="small" x="970" y="1412">JOIN 是否正确</text>
+  <rect class="node" x="840" y="1450" width="260" height="44"/>
+  <text class="small" x="970" y="1472">聚合是否重复计数</text>
+  <rect class="node" x="840" y="1510" width="260" height="44"/>
+  <text class="small" x="970" y="1532">是否符合页面 / API 口径</text>
+
+  <polygon class="decision" points="590,1538 725,1590 590,1642 455,1590"/>
+  <text class="text" x="590" y="1590">验证通过？</text>
+
+  <rect class="end" x="60" y="1600" width="300" height="58"/>
+  <text class="text" x="210" y="1629">输出运营可读结果</text>
+
+  <rect class="end" x="820" y="1600" width="300" height="58"/>
+  <text class="text" x="970" y="1629">沉淀新确认口径 / 结束</text>
+
+  <path class="line" d="M590 178 L590 230"/>
+  <path class="line" d="M590 288 L590 320"/>
+  <path class="line" d="M590 320 L235 320 L235 330"/>
+  <path class="line" d="M590 288 L590 330"/>
+  <path class="line" d="M590 320 L945 320 L945 330"/>
+  <path class="line" d="M235 388 L235 415 L590 415 L590 445"/>
+  <path class="line" d="M590 388 L590 445"/>
+  <path class="line" d="M945 388 L945 415 L590 415"/>
+  <path class="line" d="M435 510 L370 510"/>
+  <text class="label" x="405" y="500">否</text>
+  <path class="line dash" d="M230 480 L230 260 L440 260"/>
+  <path class="line" d="M590 575 L590 640"/>
+  <text class="label" x="615" y="610">是</text>
+  <path class="line" d="M590 698 L590 725"/>
+  <path class="line" d="M590 725 L230 725 L230 745"/>
+  <path class="line" d="M590 698 L590 745"/>
+  <path class="line" d="M590 725 L950 725 L950 735"/>
+  <path class="line" d="M230 805 L230 845 L590 845 L590 875"/>
+  <path class="line" d="M590 805 L590 875"/>
+  <path class="line" d="M950 815 L950 845 L590 845"/>
+  <path class="line" d="M435 940 L370 940"/>
+  <text class="label" x="405" y="930">否</text>
+  <path class="line" d="M230 970 L230 1040"/>
+  <path class="line" d="M230 1094 L230 1130"/>
+  <path class="line" d="M230 1184 L230 1220"/>
+  <path class="line" d="M370 1250 L430 1250 L430 1089 L440 1089"/>
+  <path class="line" d="M745 940 L760 940 L760 1089 L740 1089"/>
+  <text class="label" x="775" y="940">是</text>
+  <path class="line" d="M590 1118 L590 1185"/>
+  <path class="line" d="M740 1214 L800 1214 L800 1150 L810 1150"/>
+  <path class="line" d="M740 1214 L810 1235"/>
+  <path class="line" d="M740 1214 L800 1214 L800 1320 L810 1320"/>
+  <path class="line" d="M590 1243 L590 1325"/>
+  <path class="line" d="M590 1383 L590 1430"/>
+  <path class="line" d="M440 1459 L350 1459"/>
+  <path class="line" d="M740 1459 L830 1459"/>
+  <path class="line" d="M590 1488 L590 1538"/>
+  <path class="line" d="M455 1590 L360 1629"/>
+  <text class="label" x="410" y="1598">是</text>
+  <path class="line" d="M725 1590 L820 1629"/>
+  <text class="label" x="775" y="1598">沉淀/结束</text>
+  <path class="line dash" d="M590 1642 L590 1666 L1130 1666 L1130 1214 L740 1214"/>
+  <text class="label" x="665" y="1660">否：修正 SQL 后重跑</text>
+</svg>

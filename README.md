@@ -12,6 +12,12 @@
 - 查询结果以 JSON 输出，便于 AI 助手进一步总结。
 - 提供敏感数据、生产环境和大批量导出场景的安全处理建议。
 
+## Workflow
+
+![数据库查询助手 Workflow](./数据库查询助手_workflow.svg)
+
+配套 Mermaid 源文件：[数据库查询助手_workflow.md](./数据库查询助手_workflow.md)
+
 ## 目录结构
 
 ```text
